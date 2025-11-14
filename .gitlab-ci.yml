@@ -1,0 +1,13 @@
+image: docker:19.03.12
+services:
+  - docker:19.03.12-dind
+
+stages:
+  - test
+
+checker:
+  stage: test
+  image:
+    name: gitlab.cs.pub.ro:5050/mn/2024-2025/tema2/tema2-private:latest
+  script:
+    - echo ""
